@@ -1,0 +1,19 @@
+node_modules/
+.env
+.env.*
+!.env.example
+
+# báo cáo soát quyền Windows
+.acl-report/
+
+# benchmark output
+runs/
+assets/images/generated/
+coverage/
+dist/
+
+# editor / os
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/agent/node_modules/

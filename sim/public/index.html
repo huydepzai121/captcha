@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>click sim — live</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header id="run-header">
+      <div class="brand">click sim</div>
+      <div class="hdr-stats">
+        <span id="hdr-solver">solver: —</span>
+        <span id="hdr-run">run: idle</span>
+        <span id="hdr-solved">solved: 0</span>
+        <span id="hdr-failed">failed: 0</span>
+      </div>
+      <div class="hdr-actions">
+        <label class="chk"><input type="checkbox" id="opt-headless" checked /> headless</label>
+        <select id="opt-solver">
+          <option value="random">random</option>
+          <option value="vision">vision (AI Gateway)</option>
+        </select>
+        <button id="btn-start">START</button>
+        <button id="btn-stop" disabled>STOP</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="panels" aria-label="challenge panels"></section>
+      <section id="terminal-wrap" aria-label="worker log">
+        <div class="term-title">parallel workers</div>
+        <div id="terminal"></div>
+      </section>
+    </main>
+
+    <script type="module" src="/dashboard.js"></script>
+  </body>
+</html>

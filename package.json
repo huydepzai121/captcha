@@ -1,0 +1,41 @@
+{
+  "name": "captcha",
+  "private": true,
+  "workspaces": ["sim"],
+  "type": "module",
+  "description": "Local click-grounding benchmark harness. Self-generated challenges, server-side ground truth, JEV as typed judge.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "tsx src/server/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "gen:assets": "tsx scripts/gen-assets.ts",
+    "verify-assets": "tsx scripts/verify-assets.ts",
+    "lint:boundaries": "tsx scripts/lint-boundaries.ts",
+    "pretest": "npm run verify-assets && npm run lint:boundaries",
+    "bench": "tsx src/bench/cli.ts",
+    "serve": "tsx src/server/index.ts",
+    "testbed": "tsx agent/testbed/server.ts",
+    "judge": "tsx src/judge/cli.ts",
+    "agent": "tsx agent/index.ts",
+    "bench:demo": "tsx agent/bench.ts"
+  },
+  "dependencies": {
+    "@fastify/static": "^10.1.4",
+    "@fastify/websocket": "^11.3.1",
+    "better-sqlite3": "^13.0.3",
+    "fastify": "^5.12.5",
+    "playwright": "^1.63.0",
+    "sharp": "^0.34.4"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^22.13.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.2.4"
+  }
+}

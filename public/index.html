@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>click-grounding bench</title>
+    <style>
+      :root {
+        --bg: #0d1117;
+        --panel: #161b22;
+        --line: #30363d;
+        --fg: #c9d1d9;
+        --dim: #8b949e;
+        --accent: #58a6ff;
+        --ok: #3fb950;
+        --bad: #f85149;
+        --warn: #d29922;
+        --mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg);
+        font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+      body { display: flex; flex-direction: column; height: 100vh; }
+      header { display: flex; gap: 18px; align-items: center; padding: 10px 16px;
+        background: var(--panel); border-bottom: 1px solid var(--line); }
+      .brand { font-family: var(--mono); font-weight: 600; color: var(--accent); }
+      .stats { display: flex; gap: 16px; font-family: var(--mono); font-size: 12px; color: var(--dim); }
+      main { flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 30%); min-height: 0; }
+      #feed { overflow: auto; padding: 12px; display: grid; gap: 12px; align-content: start;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+      #feed.only-failed .card:not(.fail) { display: none; }
+      .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+        overflow: hidden; display: flex; flex-direction: column; }
+      .card.pass { border-color: rgba(63,185,80,.7); }
+      .card.fail { border-color: rgba(248,81,73,.7); }
+      .card-head { display: flex; align-items: center; gap: 8px; padding: 6px 8px;
+        font-family: var(--mono); font-size: 11px; }
+      .card-head .id { color: var(--accent); }
+      .card-head .state { margin-left: auto; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--line); }
+      .instr { padding: 0 8px 6px; font-size: 12px; color: var(--fg); }
+      .shot { position: relative; line-height: 0; background: #000; aspect-ratio: 1 / 1; }
+      .shot img { width: 100%; height: 100%; display: block; }
+      .shot .cells { position: absolute; inset: 0; display: grid; }
+      .shot .cell.picked { outline: 3px solid var(--warn); outline-offset: -3px;
+        background: rgba(210,153,34,.18); }
+      .card.pass .cell.picked { outline-color: var(--ok); background: rgba(63,185,80,.2); }
+      .card.fail .cell.picked { outline-color: var(--bad); background: rgba(248,81,73,.2); }
+      .verdict { padding: 6px 8px; font-family: var(--mono); font-size: 11px; color: var(--dim); }
+      .card.pass .verdict b { color: var(--ok); }
+      .card.fail .verdict b { color: var(--bad); }
+      .toggle { margin-left: auto; font: 12px var(--mono); color: var(--fg); background: transparent;
+        border: 1px solid var(--line); border-radius: 6px; padding: 3px 10px; cursor: pointer; }
+      .toggle[aria-pressed="true"] { border-color: var(--bad); color: var(--bad); }
+      .state { padding: 1px 8px; border-radius: 999px; border: 1px solid var(--line); }
+      .state.COMPLETE { color: var(--ok); border-color: rgba(63,185,80,.5); }
+      .state.FAILED { color: var(--bad); border-color: rgba(248,81,73,.5); }
+      .state.EXECUTING, .state.VERIFYING, .state.ANALYZING { color: var(--warn); border-color: rgba(210,153,34,.5); }
+      #term-wrap { border-left: 1px solid var(--line); background: #010409; display: flex; flex-direction: column; min-height: 0; }
+      .term-title { padding: 8px 12px; border-bottom: 1px solid var(--line);
+        font-family: var(--mono); font-size: 12px; color: var(--dim); }
+      #term { flex: 1; overflow: auto; padding: 10px 12px; font-family: var(--mono);
+        font-size: 12px; white-space: pre-wrap; word-break: break-word; }
+      .off { color: var(--dim); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="brand">click-grounding bench</div>
+      <div class="stats">
+        <span id="s-done">0 / 0</span>
+        <span id="s-rate">solve rate —</span>
+        <span id="s-solver">solver —</span>
+      </div>
+      <button class="toggle" id="only-failed" aria-pressed="false">chỉ hiện đề sai</button>
+    </header>
+    <main>
+      <section id="feed"></section>
+      <section id="term-wrap">
+        <div class="term-title">parallel workers</div>
+        <div id="term"></div>
+      </section>
+    </main>
+    <script type="module">
+      const feed = document.getElementById('feed');
+      const term = document.getElementById('term');
+      const sDone = document.getElementById('s-done');
+      const sRate = document.getElementById('s-rate');
+      const sSolver = document.getElementById('s-solver');
+
+      const onlyFailed = document.getElementById('only-failed');
+      onlyFailed.addEventListener('click', () => {
+        const on = onlyFailed.getAttribute('aria-pressed') !== 'true';
+        onlyFailed.setAttribute('aria-pressed', String(on));
+        feed.classList.toggle('only-failed', on);
+      });
+
+      /** Một thẻ cho mỗi challenge: ảnh lưới + ô AI đã click + kết quả chấm. */
+      const cards = new Map();
+      const MAX_CARDS = 120;
+
+      const cardFor = (id) => {
+        let card = cards.get(id);
+        if (card) return card;
+        card = document.createElement('article');
+        card.className = 'card';
+        card.innerHTML =
+          '<div class="card-head"><span class="id"></span><span class="cid"></span>' +
+          '<span class="state">—</span></div>' +
+          '<div class="instr">…</div>' +
+          '<div class="shot"><img alt="" /><div class="cells"></div></div>' +
+          '<div class="verdict">đang giải…</div>';
+        card.querySelector('.cid').textContent = id;
+        feed.prepend(card);
+        cards.set(id, card);
+        while (feed.childElementCount > MAX_CARDS) {
+          const last = feed.lastElementChild;
+          cards.forEach((v, k) => { if (v === last) cards.delete(k); });
+          last.remove();
+        }
+        return card;
+      };
+
+      const layoutCells = (card, grid) => {
+        const cells = card.querySelector('.cells');
+        if (cells.childElementCount) return;
+        cells.style.gridTemplateColumns = 'repeat(' + grid.cols + ', 1fr)';
+        cells.style.gridTemplateRows = 'repeat(' + grid.rows + ', 1fr)';
+        // Giữ đúng tỉ lệ lưới ngay cả khi ảnh chưa tải xong.
+        card.querySelector('.shot').style.aspectRatio = grid.cols + ' / ' + grid.rows;
+        for (let i = 0; i < grid.cols * grid.rows; i += 1) {
+          const cell = document.createElement('div');
+          cell.className = 'cell';
+          cells.append(cell);
+        }
+      };
+
+      const markPicked = (card, tiles) => {
+        const cells = card.querySelector('.cells').children;
+        for (const t of tiles) cells[t]?.classList.add('picked');
+      };
+
+      let done = 0;
+      let ok = 0;
+      let judged = 0;
+      let total = 0;
+
+      const line = (status, message) => {
+        const el = document.createElement('div');
+        const t = new Date();
+        const p = (n) => String(n).padStart(2, '0');
+        el.innerHTML =
+          '<span class="off">' + p(t.getHours()) + ':' + p(t.getMinutes()) + ':' + p(t.getSeconds()) + '</span> ' +
+          '<b>' + status + '</b> ' + message;
+        term.append(el);
+        term.scrollTop = term.scrollHeight;
+        while (term.childElementCount > 400) term.firstElementChild.remove();
+      };
+
+      const onEvent = (ev) => {
+        if (ev.type === 'challenge') {
+          const card = cardFor(ev.id);
+          card.querySelector('.instr').textContent = ev.instruction;
+          card.querySelector('img').src = ev.imageUrl;
+          layoutCells(card, ev.grid);
+        } else if (ev.type === 'worker') {
+          if (ev.challengeId) {
+            const card = cardFor(ev.challengeId);
+            card.querySelector('.id').textContent = '#' + String(ev.workerId).padStart(3, '0');
+            const badge = card.querySelector('.state');
+            badge.textContent = ev.state;
+            badge.className = 'state ' + ev.state;
+          }
+          if (ev.detail) line(ev.state, (ev.challengeId ? ev.challengeId + ' · ' : '') + ev.detail);
+        } else if (ev.type === 'click') {
+          markPicked(cardFor(ev.challengeId), [ev.tile]);
+        } else if (ev.type === 'verdict') {
+          const card = cardFor(ev.challengeId);
+          markPicked(card, ev.selected || []);
+          card.classList.add(ev.ok ? 'pass' : 'fail');
+          if (ev.ok) ok += 1;
+          judged += 1;
+          sRate.textContent = 'solve rate ' + ((ok / judged) * 100).toFixed(1) + '%';
+          sSolver.textContent = 'solver ' + ev.solver;
+          card.querySelector('.verdict').innerHTML =
+            '<b>' + (ev.ok ? 'ĐÚNG' : 'SAI') + '</b> · trúng ' + ev.correct +
+            ' · thừa ' + ev.wrong + ' · sót ' + ev.missed +
+            ' · ' + (ev.latencyMs / 1000).toFixed(1) + 's';
+        } else if (ev.type === 'progress') {
+          done = ev.done;
+          total = ev.total;
+          sDone.textContent = done + ' / ' + total;
+        } else if (ev.type === 'log') {
+          line(ev.status || 'INFO', ev.message || '');
+        }
+      };
+
+      const connect = () => {
+        const proto = location.protocol === 'https:' ? 'wss' : 'ws';
+        const ws = new WebSocket(proto + '://' + location.host + '/ws');
+        // Mỗi lần nối lại là một server (một run) mới: dọn trạng thái cũ, server sẽ replay ring buffer.
+        ws.addEventListener('open', () => {
+          feed.replaceChildren();
+          cards.clear();
+          done = 0; ok = 0; judged = 0; total = 0;
+          sDone.textContent = '0 / 0';
+          sRate.textContent = 'solve rate —';
+          line('OK', 'Đã kết nối — đang chờ trial mới…');
+        });
+        ws.addEventListener('message', (m) => {
+          try { onEvent(JSON.parse(m.data)); } catch { /* bỏ qua event hỏng */ }
+        });
+        ws.addEventListener('close', () => {
+          line('INFO', 'mất WS — thử lại sau 1.5s');
+          setTimeout(connect, 1500);
+        });
+      };
+      line('INFO', 'kết nối…');
+      connect();
+    </script>
+  </body>
+</html>

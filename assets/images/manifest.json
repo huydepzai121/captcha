@@ -1,0 +1,1732 @@
+{
+  "images": [
+    {
+      "file": "bridge-000.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590336)"
+    },
+    {
+      "file": "bridge-001.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590337)"
+    },
+    {
+      "file": "bridge-002.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590338)"
+    },
+    {
+      "file": "bridge-003.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590339)"
+    },
+    {
+      "file": "bridge-004.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590340)"
+    },
+    {
+      "file": "bridge-005.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590341)"
+    },
+    {
+      "file": "bridge-006.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590342)"
+    },
+    {
+      "file": "bridge-007.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590343)"
+    },
+    {
+      "file": "bridge-008.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590344)"
+    },
+    {
+      "file": "bridge-009.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590345)"
+    },
+    {
+      "file": "bridge-010.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590346)"
+    },
+    {
+      "file": "bridge-011.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590347)"
+    },
+    {
+      "file": "bridge-012.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590348)"
+    },
+    {
+      "file": "bridge-013.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590349)"
+    },
+    {
+      "file": "bridge-014.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590350)"
+    },
+    {
+      "file": "bridge-015.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590351)"
+    },
+    {
+      "file": "bridge-016.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590352)"
+    },
+    {
+      "file": "bridge-017.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590353)"
+    },
+    {
+      "file": "bridge-018.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590354)"
+    },
+    {
+      "file": "bridge-019.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590355)"
+    },
+    {
+      "file": "bridge-020.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590356)"
+    },
+    {
+      "file": "bridge-021.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590357)"
+    },
+    {
+      "file": "bridge-022.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590358)"
+    },
+    {
+      "file": "bridge-023.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590359)"
+    },
+    {
+      "file": "bridge-024.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590360)"
+    },
+    {
+      "file": "bridge-025.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590361)"
+    },
+    {
+      "file": "bridge-026.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590362)"
+    },
+    {
+      "file": "bridge-027.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590363)"
+    },
+    {
+      "file": "bridge-028.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590364)"
+    },
+    {
+      "file": "bridge-029.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590365)"
+    },
+    {
+      "file": "bridge-030.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590366)"
+    },
+    {
+      "file": "bridge-031.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590367)"
+    },
+    {
+      "file": "bridge-032.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590368)"
+    },
+    {
+      "file": "bridge-033.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590369)"
+    },
+    {
+      "file": "bridge-034.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590370)"
+    },
+    {
+      "file": "bridge-035.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590371)"
+    },
+    {
+      "file": "bridge-036.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590372)"
+    },
+    {
+      "file": "bridge-037.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590373)"
+    },
+    {
+      "file": "bridge-038.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590374)"
+    },
+    {
+      "file": "bridge-039.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590375)"
+    },
+    {
+      "file": "bridge-040.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590376)"
+    },
+    {
+      "file": "bridge-041.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590377)"
+    },
+    {
+      "file": "bridge-042.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590378)"
+    },
+    {
+      "file": "bridge-043.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590379)"
+    },
+    {
+      "file": "bridge-044.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590380)"
+    },
+    {
+      "file": "bridge-045.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590381)"
+    },
+    {
+      "file": "bridge-046.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590382)"
+    },
+    {
+      "file": "bridge-047.png",
+      "category": "bridge",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592590383)"
+    },
+    {
+      "file": "fire_hydrant-000.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591336)"
+    },
+    {
+      "file": "fire_hydrant-001.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591337)"
+    },
+    {
+      "file": "fire_hydrant-002.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591338)"
+    },
+    {
+      "file": "fire_hydrant-003.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591339)"
+    },
+    {
+      "file": "fire_hydrant-004.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591340)"
+    },
+    {
+      "file": "fire_hydrant-005.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591341)"
+    },
+    {
+      "file": "fire_hydrant-006.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591342)"
+    },
+    {
+      "file": "fire_hydrant-007.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591343)"
+    },
+    {
+      "file": "fire_hydrant-008.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591344)"
+    },
+    {
+      "file": "fire_hydrant-009.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591345)"
+    },
+    {
+      "file": "fire_hydrant-010.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591346)"
+    },
+    {
+      "file": "fire_hydrant-011.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591347)"
+    },
+    {
+      "file": "fire_hydrant-012.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591348)"
+    },
+    {
+      "file": "fire_hydrant-013.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591349)"
+    },
+    {
+      "file": "fire_hydrant-014.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591350)"
+    },
+    {
+      "file": "fire_hydrant-015.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591351)"
+    },
+    {
+      "file": "fire_hydrant-016.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591352)"
+    },
+    {
+      "file": "fire_hydrant-017.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591353)"
+    },
+    {
+      "file": "fire_hydrant-018.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591354)"
+    },
+    {
+      "file": "fire_hydrant-019.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591355)"
+    },
+    {
+      "file": "fire_hydrant-020.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591356)"
+    },
+    {
+      "file": "fire_hydrant-021.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591357)"
+    },
+    {
+      "file": "fire_hydrant-022.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591358)"
+    },
+    {
+      "file": "fire_hydrant-023.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591359)"
+    },
+    {
+      "file": "fire_hydrant-024.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591360)"
+    },
+    {
+      "file": "fire_hydrant-025.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591361)"
+    },
+    {
+      "file": "fire_hydrant-026.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591362)"
+    },
+    {
+      "file": "fire_hydrant-027.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591363)"
+    },
+    {
+      "file": "fire_hydrant-028.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591364)"
+    },
+    {
+      "file": "fire_hydrant-029.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591365)"
+    },
+    {
+      "file": "fire_hydrant-030.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591366)"
+    },
+    {
+      "file": "fire_hydrant-031.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591367)"
+    },
+    {
+      "file": "fire_hydrant-032.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591368)"
+    },
+    {
+      "file": "fire_hydrant-033.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591369)"
+    },
+    {
+      "file": "fire_hydrant-034.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591370)"
+    },
+    {
+      "file": "fire_hydrant-035.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591371)"
+    },
+    {
+      "file": "fire_hydrant-036.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591372)"
+    },
+    {
+      "file": "fire_hydrant-037.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591373)"
+    },
+    {
+      "file": "fire_hydrant-038.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591374)"
+    },
+    {
+      "file": "fire_hydrant-039.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591375)"
+    },
+    {
+      "file": "fire_hydrant-040.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591376)"
+    },
+    {
+      "file": "fire_hydrant-041.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591377)"
+    },
+    {
+      "file": "fire_hydrant-042.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591378)"
+    },
+    {
+      "file": "fire_hydrant-043.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591379)"
+    },
+    {
+      "file": "fire_hydrant-044.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591380)"
+    },
+    {
+      "file": "fire_hydrant-045.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591381)"
+    },
+    {
+      "file": "fire_hydrant-046.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591382)"
+    },
+    {
+      "file": "fire_hydrant-047.png",
+      "category": "fire_hydrant",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592591383)"
+    },
+    {
+      "file": "bicycle-000.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592336)"
+    },
+    {
+      "file": "bicycle-001.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592337)"
+    },
+    {
+      "file": "bicycle-002.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592338)"
+    },
+    {
+      "file": "bicycle-003.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592339)"
+    },
+    {
+      "file": "bicycle-004.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592340)"
+    },
+    {
+      "file": "bicycle-005.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592341)"
+    },
+    {
+      "file": "bicycle-006.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592342)"
+    },
+    {
+      "file": "bicycle-007.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592343)"
+    },
+    {
+      "file": "bicycle-008.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592344)"
+    },
+    {
+      "file": "bicycle-009.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592345)"
+    },
+    {
+      "file": "bicycle-010.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592346)"
+    },
+    {
+      "file": "bicycle-011.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592347)"
+    },
+    {
+      "file": "bicycle-012.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592348)"
+    },
+    {
+      "file": "bicycle-013.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592349)"
+    },
+    {
+      "file": "bicycle-014.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592350)"
+    },
+    {
+      "file": "bicycle-015.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592351)"
+    },
+    {
+      "file": "bicycle-016.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592352)"
+    },
+    {
+      "file": "bicycle-017.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592353)"
+    },
+    {
+      "file": "bicycle-018.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592354)"
+    },
+    {
+      "file": "bicycle-019.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592355)"
+    },
+    {
+      "file": "bicycle-020.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592356)"
+    },
+    {
+      "file": "bicycle-021.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592357)"
+    },
+    {
+      "file": "bicycle-022.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592358)"
+    },
+    {
+      "file": "bicycle-023.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592359)"
+    },
+    {
+      "file": "bicycle-024.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592360)"
+    },
+    {
+      "file": "bicycle-025.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592361)"
+    },
+    {
+      "file": "bicycle-026.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592362)"
+    },
+    {
+      "file": "bicycle-027.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592363)"
+    },
+    {
+      "file": "bicycle-028.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592364)"
+    },
+    {
+      "file": "bicycle-029.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592365)"
+    },
+    {
+      "file": "bicycle-030.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592366)"
+    },
+    {
+      "file": "bicycle-031.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592367)"
+    },
+    {
+      "file": "bicycle-032.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592368)"
+    },
+    {
+      "file": "bicycle-033.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592369)"
+    },
+    {
+      "file": "bicycle-034.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592370)"
+    },
+    {
+      "file": "bicycle-035.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592371)"
+    },
+    {
+      "file": "bicycle-036.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592372)"
+    },
+    {
+      "file": "bicycle-037.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592373)"
+    },
+    {
+      "file": "bicycle-038.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592374)"
+    },
+    {
+      "file": "bicycle-039.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592375)"
+    },
+    {
+      "file": "bicycle-040.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592376)"
+    },
+    {
+      "file": "bicycle-041.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592377)"
+    },
+    {
+      "file": "bicycle-042.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592378)"
+    },
+    {
+      "file": "bicycle-043.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592379)"
+    },
+    {
+      "file": "bicycle-044.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592380)"
+    },
+    {
+      "file": "bicycle-045.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592381)"
+    },
+    {
+      "file": "bicycle-046.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592382)"
+    },
+    {
+      "file": "bicycle-047.png",
+      "category": "bicycle",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592592383)"
+    },
+    {
+      "file": "bus-000.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593336)"
+    },
+    {
+      "file": "bus-001.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593337)"
+    },
+    {
+      "file": "bus-002.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593338)"
+    },
+    {
+      "file": "bus-003.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593339)"
+    },
+    {
+      "file": "bus-004.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593340)"
+    },
+    {
+      "file": "bus-005.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593341)"
+    },
+    {
+      "file": "bus-006.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593342)"
+    },
+    {
+      "file": "bus-007.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593343)"
+    },
+    {
+      "file": "bus-008.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593344)"
+    },
+    {
+      "file": "bus-009.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593345)"
+    },
+    {
+      "file": "bus-010.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593346)"
+    },
+    {
+      "file": "bus-011.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593347)"
+    },
+    {
+      "file": "bus-012.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593348)"
+    },
+    {
+      "file": "bus-013.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593349)"
+    },
+    {
+      "file": "bus-014.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593350)"
+    },
+    {
+      "file": "bus-015.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593351)"
+    },
+    {
+      "file": "bus-016.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593352)"
+    },
+    {
+      "file": "bus-017.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593353)"
+    },
+    {
+      "file": "bus-018.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593354)"
+    },
+    {
+      "file": "bus-019.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593355)"
+    },
+    {
+      "file": "bus-020.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593356)"
+    },
+    {
+      "file": "bus-021.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593357)"
+    },
+    {
+      "file": "bus-022.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593358)"
+    },
+    {
+      "file": "bus-023.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593359)"
+    },
+    {
+      "file": "bus-024.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593360)"
+    },
+    {
+      "file": "bus-025.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593361)"
+    },
+    {
+      "file": "bus-026.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593362)"
+    },
+    {
+      "file": "bus-027.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593363)"
+    },
+    {
+      "file": "bus-028.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593364)"
+    },
+    {
+      "file": "bus-029.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593365)"
+    },
+    {
+      "file": "bus-030.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593366)"
+    },
+    {
+      "file": "bus-031.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593367)"
+    },
+    {
+      "file": "bus-032.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593368)"
+    },
+    {
+      "file": "bus-033.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593369)"
+    },
+    {
+      "file": "bus-034.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593370)"
+    },
+    {
+      "file": "bus-035.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593371)"
+    },
+    {
+      "file": "bus-036.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593372)"
+    },
+    {
+      "file": "bus-037.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593373)"
+    },
+    {
+      "file": "bus-038.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593374)"
+    },
+    {
+      "file": "bus-039.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593375)"
+    },
+    {
+      "file": "bus-040.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593376)"
+    },
+    {
+      "file": "bus-041.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593377)"
+    },
+    {
+      "file": "bus-042.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593378)"
+    },
+    {
+      "file": "bus-043.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593379)"
+    },
+    {
+      "file": "bus-044.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593380)"
+    },
+    {
+      "file": "bus-045.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593381)"
+    },
+    {
+      "file": "bus-046.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593382)"
+    },
+    {
+      "file": "bus-047.png",
+      "category": "bus",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592593383)"
+    },
+    {
+      "file": "traffic_light-000.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594336)"
+    },
+    {
+      "file": "traffic_light-001.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594337)"
+    },
+    {
+      "file": "traffic_light-002.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594338)"
+    },
+    {
+      "file": "traffic_light-003.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594339)"
+    },
+    {
+      "file": "traffic_light-004.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594340)"
+    },
+    {
+      "file": "traffic_light-005.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594341)"
+    },
+    {
+      "file": "traffic_light-006.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594342)"
+    },
+    {
+      "file": "traffic_light-007.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594343)"
+    },
+    {
+      "file": "traffic_light-008.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594344)"
+    },
+    {
+      "file": "traffic_light-009.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594345)"
+    },
+    {
+      "file": "traffic_light-010.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594346)"
+    },
+    {
+      "file": "traffic_light-011.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594347)"
+    },
+    {
+      "file": "traffic_light-012.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594348)"
+    },
+    {
+      "file": "traffic_light-013.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594349)"
+    },
+    {
+      "file": "traffic_light-014.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594350)"
+    },
+    {
+      "file": "traffic_light-015.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594351)"
+    },
+    {
+      "file": "traffic_light-016.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594352)"
+    },
+    {
+      "file": "traffic_light-017.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594353)"
+    },
+    {
+      "file": "traffic_light-018.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594354)"
+    },
+    {
+      "file": "traffic_light-019.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594355)"
+    },
+    {
+      "file": "traffic_light-020.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594356)"
+    },
+    {
+      "file": "traffic_light-021.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594357)"
+    },
+    {
+      "file": "traffic_light-022.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594358)"
+    },
+    {
+      "file": "traffic_light-023.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594359)"
+    },
+    {
+      "file": "traffic_light-024.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594360)"
+    },
+    {
+      "file": "traffic_light-025.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594361)"
+    },
+    {
+      "file": "traffic_light-026.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594362)"
+    },
+    {
+      "file": "traffic_light-027.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594363)"
+    },
+    {
+      "file": "traffic_light-028.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594364)"
+    },
+    {
+      "file": "traffic_light-029.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594365)"
+    },
+    {
+      "file": "traffic_light-030.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594366)"
+    },
+    {
+      "file": "traffic_light-031.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594367)"
+    },
+    {
+      "file": "traffic_light-032.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594368)"
+    },
+    {
+      "file": "traffic_light-033.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594369)"
+    },
+    {
+      "file": "traffic_light-034.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594370)"
+    },
+    {
+      "file": "traffic_light-035.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594371)"
+    },
+    {
+      "file": "traffic_light-036.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594372)"
+    },
+    {
+      "file": "traffic_light-037.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594373)"
+    },
+    {
+      "file": "traffic_light-038.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594374)"
+    },
+    {
+      "file": "traffic_light-039.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594375)"
+    },
+    {
+      "file": "traffic_light-040.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594376)"
+    },
+    {
+      "file": "traffic_light-041.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594377)"
+    },
+    {
+      "file": "traffic_light-042.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594378)"
+    },
+    {
+      "file": "traffic_light-043.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594379)"
+    },
+    {
+      "file": "traffic_light-044.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594380)"
+    },
+    {
+      "file": "traffic_light-045.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594381)"
+    },
+    {
+      "file": "traffic_light-046.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594382)"
+    },
+    {
+      "file": "traffic_light-047.png",
+      "category": "traffic_light",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592594383)"
+    },
+    {
+      "file": "crosswalk-000.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595336)"
+    },
+    {
+      "file": "crosswalk-001.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595337)"
+    },
+    {
+      "file": "crosswalk-002.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595338)"
+    },
+    {
+      "file": "crosswalk-003.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595339)"
+    },
+    {
+      "file": "crosswalk-004.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595340)"
+    },
+    {
+      "file": "crosswalk-005.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595341)"
+    },
+    {
+      "file": "crosswalk-006.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595342)"
+    },
+    {
+      "file": "crosswalk-007.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595343)"
+    },
+    {
+      "file": "crosswalk-008.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595344)"
+    },
+    {
+      "file": "crosswalk-009.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595345)"
+    },
+    {
+      "file": "crosswalk-010.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595346)"
+    },
+    {
+      "file": "crosswalk-011.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595347)"
+    },
+    {
+      "file": "crosswalk-012.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595348)"
+    },
+    {
+      "file": "crosswalk-013.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595349)"
+    },
+    {
+      "file": "crosswalk-014.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595350)"
+    },
+    {
+      "file": "crosswalk-015.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595351)"
+    },
+    {
+      "file": "crosswalk-016.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595352)"
+    },
+    {
+      "file": "crosswalk-017.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595353)"
+    },
+    {
+      "file": "crosswalk-018.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595354)"
+    },
+    {
+      "file": "crosswalk-019.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595355)"
+    },
+    {
+      "file": "crosswalk-020.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595356)"
+    },
+    {
+      "file": "crosswalk-021.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595357)"
+    },
+    {
+      "file": "crosswalk-022.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595358)"
+    },
+    {
+      "file": "crosswalk-023.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595359)"
+    },
+    {
+      "file": "crosswalk-024.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595360)"
+    },
+    {
+      "file": "crosswalk-025.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595361)"
+    },
+    {
+      "file": "crosswalk-026.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595362)"
+    },
+    {
+      "file": "crosswalk-027.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595363)"
+    },
+    {
+      "file": "crosswalk-028.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595364)"
+    },
+    {
+      "file": "crosswalk-029.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595365)"
+    },
+    {
+      "file": "crosswalk-030.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595366)"
+    },
+    {
+      "file": "crosswalk-031.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595367)"
+    },
+    {
+      "file": "crosswalk-032.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595368)"
+    },
+    {
+      "file": "crosswalk-033.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595369)"
+    },
+    {
+      "file": "crosswalk-034.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595370)"
+    },
+    {
+      "file": "crosswalk-035.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595371)"
+    },
+    {
+      "file": "crosswalk-036.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595372)"
+    },
+    {
+      "file": "crosswalk-037.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595373)"
+    },
+    {
+      "file": "crosswalk-038.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595374)"
+    },
+    {
+      "file": "crosswalk-039.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595375)"
+    },
+    {
+      "file": "crosswalk-040.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595376)"
+    },
+    {
+      "file": "crosswalk-041.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595377)"
+    },
+    {
+      "file": "crosswalk-042.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595378)"
+    },
+    {
+      "file": "crosswalk-043.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595379)"
+    },
+    {
+      "file": "crosswalk-044.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595380)"
+    },
+    {
+      "file": "crosswalk-045.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595381)"
+    },
+    {
+      "file": "crosswalk-046.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595382)"
+    },
+    {
+      "file": "crosswalk-047.png",
+      "category": "crosswalk",
+      "license": "CC0-1.0",
+      "source": "procedurally generated (scripts/gen-assets.ts, seed=1592595383)"
+    }
+  ]
+}
