@@ -279,6 +279,36 @@ Một lượt thật trên lưới 4×4, đề "motorcycles":
 hai cụm và ô 44 là thứ người chỉnh ngưỡng cần thấy. JEV trả xác suất đã hiệu
 chuẩn, không phải một nhãn rời — nên ngưỡng chỉnh được bằng số liệu.
 
+### Độ rõ của ảnh quyết định rất nhiều
+
+Đo bằng `scripts/probe-jev-blur.ts` (cùng lưới, cùng đề, chỉ đổi độ rõ). Lưới
+"bus" — vật nhỏ, nền rối — ô thật thứ ba rơi khỏi ngưỡng ngay khi mờ nhẹ, nhiễu
+nền leo cùng lúc:
+
+| Ảnh | Ô ≥ 0.5 | Xác suất 9 ô |
+|---|---|---|
+| gốc | 3 | 15 **98** 89 · 1 3 2 · 6 16 **95** |
+| blur 1.2 | 2 | 11 **98** 79 · 2 3 2 · 5 17 **49** |
+| blur 2.5 | 2 | 7 **96** 61 · 2 3 3 · 5 12 38 |
+| blur 4 | 2 | 7 **89** 23 · 4 6 **20** · 10 **40** 64 |
+| thu nhỏ 50% | 1 | 5 **98** 12 · 2 3 2 · 4 9 29 |
+
+Lưới "crosswalks" — vật to, tương phản cao — thì bền: blur 4 mới mất 1 ô, thu nhỏ
+50% vẫn đủ 3. Nên thứ phá là **tỷ lệ tín hiệu trên nhiễu**, không phải độ mờ nói
+chung.
+
+Hai phép phụ trên cùng lưới:
+
+| Cấu hình | Tách tín hiệu | Chi phí / lượt |
+|---|---|---|
+| cỡ gốc 390px | nhiễu ≤ 16 | $0,00019 |
+| phóng 1024px | nhiễu ≤ 4 | **$0,00118** (6×) |
+| JPEG q60 | như gốc | $0,00019 |
+
+Pipeline hiện gửi đúng cỡ gốc, chỉ co khi vượt 1024. Phóng lên là núm chỉnh có
+thật cho lưới nhỏ, đổi lấy 6× token — chưa bật vì chưa đo được lợi ích trên tỉ
+lệ pass.
+
 ## Chi phí
 
 Jev tính **$42/Btok input** ($0,042/Mtok), output miễn phí; ảnh tính token như
