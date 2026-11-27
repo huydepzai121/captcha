@@ -106,6 +106,8 @@ submit rồi mới bung modal chứa widget (`reCaptcha2Execute`). Vì vậy `li
 | `--slowmo N` | chậm mỗi thao tác N ms, mặc định 120–250 |
 | `--user` / `--pass` | tài khoản cần đăng nhập (`live-checkio.ts`; `live-target.ts` nhận cùng cờ) |
 | `--firefox` | chạy Firefox thay Chrome (`live-checkio.ts`) — cần `npx playwright install firefox` |
+| `--min-side N` | phóng ảnh lưới tới sàn N px trước khi gửi model, mặc định 768 |
+| `--no-ambiguity` | tắt bước hỏi lại từng ô mơ hồ — nhanh và rẻ hơn, hợp khi chỉ cần thử |
 
 Script dùng profile riêng trong `runs/pw-profile-*`, nên cookie và lịch sử tích luỹ
 giữa các lần chạy: Google càng tin thì càng ít challenge.

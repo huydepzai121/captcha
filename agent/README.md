@@ -50,6 +50,8 @@ npm run agent -- --max-attempts 12 --threshold 0.5
 | `--keep-open` | không đóng trình duyệt khi xong |
 | `--max-attempts N` | số challenge tối đa (mặc định 35) |
 | `--threshold P` | ngưỡng xác suất JEV để click (mặc định 0.5) |
+| `--min-side N` | phóng ảnh lưới tới sàn N px trước khi gửi (mặc định 768) |
+| `--no-ambiguity` | tắt bước hỏi lại từng ô mơ hồ (nhanh, rẻ hơn) |
 | `--decision vision` | ép dùng đường lùi vision + JEV chữ |
 | `--jev-model M` | đổi model decision (mặc định `jev-latest`) |
 | `--vision-model M` | đổi model vision của đường lùi |
@@ -308,6 +310,42 @@ Hai phép phụ trên cùng lưới:
 Pipeline hiện gửi đúng cỡ gốc, chỉ co khi vượt 1024. Phóng lên là núm chỉnh có
 thật cho lưới nhỏ, đổi lấy 6× token — chưa bật vì chưa đo được lợi ích trên tỉ
 lệ pass.
+
+### Hai thay đổi đã bật, và điều chúng KHÔNG làm được
+
+Từ các phép đo trên, pipeline được siết hai chỗ:
+
+1. **Sàn ảnh gửi JEV là 768px** (trước là 280). Lưới nhỏ được phóng lên, không
+   bao giờ bị thu nhỏ dưới cỡ gốc. Tắt bằng `--min-side 280`.
+2. **Soát lại từng ô mơ hồ** (`agent/jev-ambiguous.ts`): ô có p trong 0,30–0,72
+   được cắt riêng, phóng 384px và hỏi lại JEV chỉ về ô đó; kết quả ghi đè điểm
+   cũ. Chỉ đụng ô mơ hồ, ô đã click thì bỏ qua (click lại là bỏ chọn). Tắt bằng
+   `--no-ambiguity`.
+
+Hiệu quả trên từng ô là thật và thấy được ngay trong log:
+
+```
+0:1 1:4 2:1 3:99 4:41 5:1 6:99 7:76 8:1
+ô mơ hồ 4: 41 → riêng ô 81
+soát lại 1 ô mơ hồ → 4 ô [3,4,6,7]
+```
+
+Ô 41% — thứ ngưỡng 0,5 sẽ bỏ — được cứu; và ở chiều ngược lại, ô nhiễu 56 từng
+đè ô thật 37 trên lưới "fire hydrant" cũng bị hạ đúng.
+
+**Nhưng đối chứng 6 trial mỗi nhánh trên testbed thì chưa thấy khác biệt về tỉ lệ
+pass:**
+
+| Nhánh | Pass | Challenge TB | Giây TB | $ TB / trial |
+|---|---|---|---|---|
+| cũ · ảnh gốc · không soát | 6/6 | 2,2 | 16,2 | $0,0050 |
+| mới · phóng 768 · soát ô mơ hồ | 6/6 | 3,0 | 20,2 | **$0,0069** (+36%) |
+
+Testbed là sitekey dễ, cả hai đều qua sạch, nên 6 trial chưa đủ để nói hơn kém —
+chỉ nói được cái giá: **+36% chi phí, +25% thời gian**. Muốn biết nó có nâng tỉ lệ
+pass trên lưới khó thật hay không thì phải chạy `scripts/bench-jev-tuning.ts` với
+nhiều trial hơn và trên lưới khó, đừng suy từ 6 trial.
+
 
 ## Chi phí
 

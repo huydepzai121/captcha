@@ -28,6 +28,8 @@ const browserFlag = get('--browser');
 const targetFlag = get('--target');
 const decisionFlag = get('--decision') === 'vision' ? 'vision' : 'jev-images';
 const jevModel = get('--jev-model');
+const minSideRaw = get('--min-side');
+const ambiguity = !args.includes('--no-ambiguity');
 
 const threshold = thresholdRaw === undefined ? undefined : Number.parseFloat(thresholdRaw);
 if (threshold !== undefined && !Number.isFinite(threshold)) {
@@ -41,6 +43,7 @@ try {
   console.log(`  vision:   ${visionModel ?? VISION_MODEL}${decisionFlag === 'vision' ? '' : ' (chỉ đường lùi)'}`);
   console.log(`  decision: ${decisionFlag === 'jev-images' ? 'JEV nhìn thẳng ảnh (jev-latest)' : 'vision mô tả → JEV chấm chữ'}`);
   console.log(`  ngưỡng:   ${threshold ?? 0.5}`);
+  console.log(`  ảnh gửi:  phóng tới sàn ${minSideRaw ?? 768}px · soát ô mơ hồ: ${ambiguity ? 'bật' : 'tắt'}`);
   console.log(`  headless: ${headless}${slowMoRaw ? ` · slowMo ${slowMoRaw}ms` : ''}`);
   console.log(`  browser:  ${browserFlag ?? 'chrome'}`);
   console.log('');
@@ -52,6 +55,8 @@ try {
     onLog: (msg) => console.log(`  ${msg}`),
     ...(slowMoRaw ? { slowMo: Number.parseInt(slowMoRaw, 10) } : {}),
     ...(threshold === undefined ? {} : { threshold }),
+    ...(minSideRaw ? { minImageSide: Number.parseInt(minSideRaw, 10) } : {}),
+    ambiguity,
     ...(visionModel ? { visionModel } : {}),
     ...(targetFlag ? { targetUrl: targetFlag === 'demo' ? DEMO_URL : targetFlag } : {}),
     decision: decisionFlag,

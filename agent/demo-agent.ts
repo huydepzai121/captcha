@@ -19,6 +19,7 @@ import sharp from 'sharp';
 import { describeTiles, verifyTiles, type VerifyTilesResult, type VisionResult } from './vision.js';
 import { decideTilesWithJev, cleanInstruction, extractTarget, type JevDecision } from './jev-decide.js';
 import { solveGridWithJev } from './jev-solve.js';
+import { resolveAmbiguous } from './jev-ambiguous.js';
 import { solveHCaptcha } from './hcaptcha.js';
 import { ANCHOR_FRAME, CHALLENGE_FRAME, DEMO_URL, requireApiKey } from './config.js';
 
@@ -48,6 +49,10 @@ export interface AgentOptions {
   keepOpen?: boolean;
   /** Thư mục lưu ảnh các ca JEV không tìm thấy ô nào. */
   debugDir?: string;
+  /** Sàn cạnh ảnh gửi JEV: lưới nhỏ được phóng lên mức này. Mặc định 768. */
+  minImageSide?: number;
+  /** Hỏi lại JEV trên từng ô mơ hồ trước khi chốt. Mặc định bật. */
+  ambiguity?: boolean;
   onLog?: (msg: string) => void;
   /**
    * Chạy sau khi trang đã mở, trước khi động vào captcha. Dùng cho trang đăng
@@ -496,7 +501,7 @@ export async function runAgent(opts: AgentOptions): Promise<AgentResult> {
           try {
             const gridDecision = await solveGridWithJev({
               apiKey: opts.apiKey,
-              imageBase64: await gridImageBase64(shot),
+              imageBase64: await gridImageBase64(shot, opts.minImageSide),
               cols: grid.cols,
               rows: grid.rows,
               instruction,
@@ -612,6 +617,31 @@ export async function runAgent(opts: AgentOptions): Promise<AgentResult> {
           .map(([k, p]) => `${k.replace('tile_', '')}:${(p * 100).toFixed(0)}`)
           .join(' ');
         log(`   ${decision.source === 'jev' ? 'JEV' : 'điểm'}: ${dist}`);
+
+        // Ô nằm sát ngưỡng thì nhìn riêng ô đó: trên lưới cảnh rối, ô thật 37 có
+        // thể thua ô nhiễu 56, nhưng cắt riêng + phóng to thì tách lại được.
+        // Ô đã click không đụng tới — click lại là bỏ chọn.
+        if (opts.ambiguity !== false && decision.source === 'jev') {
+          const fixed = await resolveAmbiguous({
+            apiKey: opts.apiKey,
+            shot,
+            cols: grid.cols,
+            rows: grid.rows,
+            instruction,
+            probabilities: decision.probabilities,
+            threshold: opts.threshold ?? 0.5,
+            clicked: clickedThisChallenge,
+            ...(opts.jevModel ? { jevModel: opts.jevModel } : {}),
+            onLog: log,
+            onCost: (usd) => {
+              totalCost += usd;
+            },
+          });
+          if (fixed.checked > 0) {
+            decision = { ...decision, probabilities: fixed.probabilities, tiles: fixed.tiles };
+            log(`   soát lại ${fixed.checked} ô mơ hồ → ${fixed.tiles.length} ô [${fixed.tiles.join(',')}]`);
+          }
+        }
 
         // Hai ca cần hỏi thẳng vision trên ảnh từng ô (một lượt gọi cho cả nhóm):
         //   - Google đang báo "chọn thêm" — lượt verify trước thiếu ô. Chỉ THÊM
@@ -826,18 +856,22 @@ export async function runAgent(opts: AgentOptions): Promise<AgentResult> {
  * Ảnh lưới gửi cho JEV: JPEG base64, không tiền tố `data:`.
  *
  * API từ chối ảnh có cạnh ngoài 280–1568px, nên phải co/giãn cho vừa khung đó.
- * Lưới 4x4 chụp ở 1x chỉ ~600px — giãn lên 1024 giúp vật nhỏ có pixel để thở.
+ *
+ * Sàn 768 (không phải 280) là kết quả đo, không phải phỏng đoán: lưới 3×3 chỉ
+ * ~390px, ở cỡ gốc nhiễu nền 16 và ô thật 89–98; phóng lên 1024 thì nhiễu xuống
+ * ≤4 và ô thật 98–99. Cái giá là token ảnh (6×), nên `minImageSide` chỉnh được.
+ * Không bao giờ THU NHỎ dưới cỡ gốc — thu nhỏ 50% mất hẳn một ô.
  */
-const MIN_IMAGE_SIDE = 280;
+const MIN_IMAGE_SIDE = 768;
 const MAX_IMAGE_SIDE = 1024;
 
-async function gridImageBase64(shot: Buffer): Promise<string> {
+async function gridImageBase64(shot: Buffer, minSide = MIN_IMAGE_SIDE): Promise<string> {
   const meta = await sharp(shot).metadata();
   const width = meta.width ?? 0;
   const height = meta.height ?? 0;
   const longest = Math.max(width, height);
   const factor =
-    longest > MAX_IMAGE_SIDE ? MAX_IMAGE_SIDE / longest : longest < MIN_IMAGE_SIDE ? MIN_IMAGE_SIDE / longest : 1;
+    longest > MAX_IMAGE_SIDE ? MAX_IMAGE_SIDE / longest : longest < minSide ? minSide / longest : 1;
 
   const out = await sharp(shot)
     .resize(Math.round(width * factor), Math.round(height * factor), { fit: 'fill' })
