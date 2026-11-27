@@ -44,6 +44,29 @@ Kết quả ra `runs/<run-id>/report.json` và `report.md`.
 --headful          tắt headless để xem mắt
 ```
 
+## Trang mẫu và trang thật
+
+Testbed dựng sẵn hai trang luôn bắt giải (sitekey test của Google), để xem agent
+vét lưới thật sự thay vì tick suông:
+
+```bash
+npm run testbed                                   # http://127.0.0.1:3400/
+npx tsx scripts/live-target.ts "http://127.0.0.1:3400/" --headful --slowmo 250
+```
+
+Trang thật thì thường **pass thẳng** (Chrome thật + profile tích luỹ), nên chỉ
+dùng để biết trang có chặn hay không:
+
+```bash
+npx tsx scripts/live-target.ts "https://muasamcong.mof.gov.vn/c/portal/login" --headful
+npx tsx scripts/live-checkio.ts --headful --user <tên> --pass <mật khẩu>
+```
+
+`live-checkio.ts` dành cho trang đăng nhập NukeViet/SSO: widget reCAPTCHA ở đó
+chỉ được dựng trong modal **sau** cú bấm Đăng nhập, nên script điền form và bấm
+nút trước rồi mới để agent tìm anchor. Cách chạy đầy đủ, cờ và sự cố:
+[HUONG-DAN.md](HUONG-DAN.md).
+
 ## Kiến trúc
 
 ```

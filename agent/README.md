@@ -92,19 +92,29 @@ Mở http://127.0.0.1:3400/ bằng mắt thường cũng được: panel hiện
 `navigator.webdriver`, UA, GPU qua WebGL, timezone, kích thước cửa sổ — đúng
 những thứ Google đọc.
 
-## hCaptcha — thử nghiệm, chưa tính là chạy được
+## hCaptcha — hoãn, ưu tiên reCAPTCHA
 
-Trang test: http://127.0.0.1:3400/hcaptcha (sitekey test của hCaptcha).
-Agent tự nhận ra hCaptcha (`iframe` chứa `hcaptcha.com`) và đi flow riêng trong
-`agent/hcaptcha.ts`.
+Trang test: http://127.0.0.1:3400/hcaptcha. Agent tự nhận ra hCaptcha (`iframe`
+chứa `hcaptcha.com`) và đi flow riêng trong `agent/hcaptcha.ts`.
+
+**Chặn hiện tại (đo 27/11): trang test không render widget.** Trình duyệt tải
+được `https://js.hcaptcha.com/1/api.js` (HTTP 200) nhưng console báo:
+
+```
+[hCaptcha] Invalid render configuration
+[hCaptcha] sitekey | Is not a valid sitekey.
+```
+
+Sitekey test `10000000-ffff-ffff-ffff-000000000002` trong `agent/testbed/server.ts`
+bị hCaptcha từ chối, nên không có iframe nào — không phải lỗi flow. Muốn thử
+hCaptcha phải thay sitekey thật (hoặc sitekey test còn hiệu lực) trước, rồi mới
+đo được. Chừng nào chưa thay thì mọi phép đo hCaptcha đều vô nghĩa.
 
 Khác reCAPTCHA ở chỗ load-bearing: hCaptcha vẽ cả lưới lên **một `<canvas>`**,
 không có DOM từng ô — nên phải chụp canvas, click theo toạ độ, đọc prompt từ
 `.prompt-text`, gửi bằng `.button-submit`.
 
-Trạng thái hiện tại: **flow chạy đúng máy móc** (tick được "I am human", chụp
-lưới, JEV chọn ô theo xác suất, click, gửi) nhưng chưa qua được challenge —
-mọi lượt đều bị chấm sai. Ba chỗ đã biết còn sai:
+Ba chỗ code đã biết còn sai (giữ nguyên, chưa sửa):
 
 1. `.error-text` nằm sẵn trong DOM và hiện từ trước khi gửi, nên không dùng được
    làm dấu hiệu "sai"; hiện chỉ còn hai tín hiệu (checkbox tick, đổi đề) và
@@ -117,6 +127,21 @@ mọi lượt đều bị chấm sai. Ba chỗ đã biết còn sai:
 Đừng dùng hCaptcha làm mốc so sánh cho tới khi sửa xong ba điểm trên. Đường
 reCAPTCHA bên trên không bị ảnh hưởng: auto-detect chỉ rẽ nhánh khi trang có
 hCaptcha.
+
+## Đo trên reCAPTCHA của trang thật
+
+Hai script dựng sẵn cho việc này — chúng là thứ đã chạy đúng, dùng thay vì tự
+viết lại vòng lặp:
+
+| Script | Việc |
+|---|---|
+| `npx tsx scripts/live-target.ts "<url>" --headful` | mở một URL bất kỳ, tick/solve, đọc phản hồi, lưu ảnh |
+| `npx tsx scripts/live-checkio.ts --headful --user U --pass P` | flow đầy đủ cho trang đăng nhập NukeViet/SSO (điền form trước, captcha nằm trong modal) |
+
+Cả hai dùng chung `runAgent` và hai hook `beforeSolve`/`afterSolve`. Trang thật
+thường **pass thẳng** vì Chrome thật + profile tích luỹ; muốn thấy lưới thì dùng
+testbed, đừng kết luận từ trang thật.
+
 
 ## Vì sao không bị chặn
 

@@ -42,6 +42,12 @@ Log in ra hai địa chỉ:
 panel trong trang in đúng những thứ Google soi (`navigator.webdriver`, UA, GPU qua
 WebGL, timezone, kích thước cửa sổ).
 
+> **Trang `/hcaptcha` hiện chưa dùng được** (đo 27/11): sitekey test trong trang bị
+> hCaptcha từ chối — console báo `Is not a valid sitekey` và không có iframe nào
+> được dựng, nên agent không có gì để tick. Cứ dùng trang reCAPTCHA `/`; chi tiết
+> ở [agent/README.md](agent/README.md).
+
+
 ## 3. Chạy agent lên trang mẫu
 
 Terminal thứ hai:
@@ -130,6 +136,10 @@ Remove-Item -Recurse -Force runs\pw-profile-chrome-target
 ```
 
 **Port 3400 bị chiếm** — sửa `PORT` trong `agent/testbed/server.ts`.
+
+**`không thấy khung hCaptcha`** — trang `/hcaptcha` của testbed đang hỏng sitekey,
+widget không render. Dùng trang reCAPTCHA `/`, hoặc thay sitekey trong
+`agent/testbed/server.ts`.
 
 **`không thấy widget reCAPTCHA`** — trang chưa bung widget. Trên trang NukeViet phải
 bấm nút đăng nhập trước (dùng `live-checkio.ts`), và kiểm tra trang có thực sự là
